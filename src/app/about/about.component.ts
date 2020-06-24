@@ -12,6 +12,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 myname: String ="Jyoti";
+uname: String ="Jyoti";
 myMethod(){
   return "My name is:" + this.myname;
 }
