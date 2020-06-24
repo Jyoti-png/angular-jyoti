@@ -7,12 +7,13 @@ import { HelloComponent } from './hello.component';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
+import { ContactusComponent } from './contactus/contactus.component';
 //import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouting ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, AboutComponent, ServicesComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, AboutComponent, ServicesComponent, ContactusComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -11,5 +11,20 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
   }
+myname: String ="Jyoti";
+myMethod(){
+  return "My name is:" + this.myname;
+}
+appStatus: boolean = true;
 
+
+ msg:String="";
+// onAddCart(){
+//   this.msg="Product Added";
+// }
+
+
+onAddCart1(event){
+  this.msg = event.target.value + "Added in cart";
+}
 }

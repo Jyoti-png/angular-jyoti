@@ -1,0 +1,24 @@
+<div class="name">My Name is {{myname}}</div>
+{{5+8}}
+{{"Name" + myname}}
+{{myname.length}}
+<br/>
+{{myname.toUpperCase()}}
+<br/>
+{{myMethod()}}
+<br>
+My status is {{appStatus? "Online" : "Offline"}}
+
+<br/>
+Property Binding 
+<input type="text" [disabled]="true" [value]="myname"/> OR<br/>
+<input type="text" bind-value="myname"/> 
+<br>
+<!-- <button (click)="onAddCart()">Add</button>
+<p>{{msg}}</p> -->
+
+<br>
+<button value="Laptop" (click)="onAddCart1($event)">Laptop</button>
+<button value="TV" (click)="onAddCart1($event)">TV</button>
+<button value="Washing machine" (click)="onAddCart1($event)">Washing machine</button>
+<p>{{msg}}</p>
