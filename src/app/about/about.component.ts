@@ -58,4 +58,13 @@ this.users.push(
 )
 
 }
+
+
+onRemoveUser(unames){
+  this.users.splice(this.users.length-1)
+}
+
+onRemoveUsers(item){
+  this.users.splice(item, 1);
+}
 }

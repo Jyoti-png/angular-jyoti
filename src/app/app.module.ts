@@ -1,3 +1,4 @@
+;
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -8,12 +9,16 @@ import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
+import { CardComponent } from './card/card.component';
 //import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouting ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, AboutComponent, ServicesComponent, ContactusComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, AboutComponent, ServicesComponent, ContactusComponent, LoginComponent, HomeComponent,  AppNotFoundComponent, CardComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

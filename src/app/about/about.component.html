@@ -84,20 +84,46 @@ Two Way<br>
 
 
   <input type="text" #unames name=""/><button class="btn btn-primary" (click)="onCreateUsers(unames)">Add User</button>
+  <button class="btn btn-danger" (click)="onRemoveUser(unames)">Remove User</button>
 
   <div class="row">
         <table class="table">
           <thead>
             <th>SNO.</th>
             <th>Name</th>
-            <!-- <th>IDS</th> -->
+             <th>Remove</th>  
           </thead>
           <tbody>
             <tr *ngFor="let user of users index as i">
               <td>{{i+1}}</td>
               <td>{{user.name}}</td>
-              <!-- <td>{{pro.id}}</td> -->
+               <td><button class="btn btn-danger" (click)="onRemoveUsers(i)">Remove User</button> 
             </tr>
           </tbody>
           </table>
+        </div>
+
+
+        <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <app-card>
+  <h5 class="card-title">Laptop</h5>
+    <a href="#" class="btn btn-primary">Go somewhere for Laptop</a>
+                  </app-card>
+              </div>
+               <div class="col-md-4">
+                  <app-card>
+ <h5 class="card-title">Mobile</h5>
+    <a href="#" class="btn btn-primary">Go somewhere for Mobile</a>
+                  </app-card>
+              </div>
+               <div class="col-md-4">
+                  <app-card>
+ <h5 class="card-title">TV</h5>
+    <a href="#" class="btn btn-primary">Go somewhere for TV</a>
+                  </app-card>
+              </div>
+              
+          </div>
         </div>
