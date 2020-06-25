@@ -28,3 +28,76 @@ Property Binding
 Two Way<br>
 <input type="text" value="" [(ngModel)]="uname">
 <p>{{uname}}</p>
+
+
+
+<br/>
+<div class="container">
+<button (click)="onButtonClick()">Add to cart</button>
+<p  *ngIf="isValid then thenBlock else elseBlock"> Shows clicked</p>
+
+
+<ng-template #thenBlock>
+  <p>Added</p>
+</ng-template>
+
+<ng-template #elseBlock>
+  <p>Please add to CArt</p>
+</ng-template>
+</div>
+
+
+<div class="container">
+    <select class="form-control" (change)="onSelectChange($event)">   
+        <option value="default">Select</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="TV">TV</option>
+        <option value="WM">WM</option>
+    </select>
+    <div class="col-md-12" [ngSwitch]="selectProduct">
+        <h2 class="text" *ngSwitchDefault>Select a value</h2>
+        <h2 class="text" *ngSwitchCase="'Laptop'">Laptop</h2>
+        <h2 class="text" *ngSwitchCase="'Mobile'">Mobile</h2>
+        <h2 class="text" *ngSwitchCase="'TV'">TV</h2>
+        <h2 class="text" *ngSwitchCase="'WM'">WM</h2>
+      </div>
+
+
+      <div class="row">
+        <table class="table">
+          <thead>
+            <th>SNO.</th>
+            <th>Name</th>
+            <th>IDS</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let pro of products index as i">
+              <td>{{i+1}}</td>
+              <td>{{pro.name}}</td>
+              <td>{{pro.id}}</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+  </div>
+
+
+  <input type="text" #unames name=""/><button class="btn btn-primary" (click)="onCreateUsers(unames)">Add User</button>
+
+  <div class="row">
+        <table class="table">
+          <thead>
+            <th>SNO.</th>
+            <th>Name</th>
+            <!-- <th>IDS</th> -->
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users index as i">
+              <td>{{i+1}}</td>
+              <td>{{user.name}}</td>
+              <!-- <td>{{pro.id}}</td> -->
+            </tr>
+          </tbody>
+          </table>
+        </div>

@@ -28,4 +28,34 @@ appStatus: boolean = true;
 onAddCart1(event){
   this.msg = event.target.value + "Added in cart";
 }
+
+
+isValid:boolean = false;
+
+onButtonClick(){
+  this.isValid = true;
+}
+
+selectProduct:String;
+onSelectChange(mine){
+  console.log(mine.target.value);
+  this.selectProduct= mine.target.value;
+}
+products=[
+{name:'Laptop', id:'pro1'},
+{name:'Mobile', id:'pro2'},
+{name:'TV', id:'pro3'},
+{name:'WM', id:'pro4'}
+
+]
+users=[];
+
+onCreateUsers(unames){
+this.users.push(
+  {
+    name:unames.value
+  }
+)
+
+}
 }
