@@ -1,0 +1,6 @@
+<div class="row bg-success text-white py-5 text-center">
+<h2 *ngIf="!productSelected">Please Select any product</h2>
+<h2 *ngIf="productSelected">{{produtName}} any product</h2>
+<p><button class="btn btn-primary" (click)="onAddProduct()">Add to Cart</button></p>
+
+</div>

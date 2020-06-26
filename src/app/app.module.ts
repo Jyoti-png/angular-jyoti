@@ -13,12 +13,13 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { CardComponent } from './card/card.component';
+import { ServicesChildComponent } from './services-child/services-child.component';
 //import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouting ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, AboutComponent, ServicesComponent, ContactusComponent, LoginComponent, HomeComponent,  AppNotFoundComponent, CardComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, AboutComponent, ServicesComponent, ContactusComponent, LoginComponent, HomeComponent,  AppNotFoundComponent, CardComponent, ServicesChildComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

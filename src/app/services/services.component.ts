@@ -11,5 +11,17 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit() {
   }
+prodSelected:boolean= false;
+ productName:String;
+ addedProduct:any;
+ onProductSelected(product){
+   this.prodSelected = true;
+this.productName = product;
+ }
+onSelected(prodata){
+  this.addedProduct = prodata;
+}
+ 
 
+ 
 }

@@ -1,1 +1,33 @@
-<div >jkj</div>
+<div class="container">
+  <h2 class="text-center"> Buy Produts</h2>
+
+  <div class="alert alert-light border d-flex" *ngIf="addedProduct">
+    <strong class="text-success">{{addedProduct}} </strong>is Selected
+    <button class="btn btn-success ml-auto">Checkout</button>
+  </div>
+<div class="row">
+  <div class="col-md-4">
+                  <app-card>
+  <h5 class="card-title">Laptop</h5>
+    <button class="btn btn-primary" (click)="onProductSelected('Laptop')" >Select this product</button>
+                  </app-card>
+              </div>
+               <div class="col-md-4">
+                  <app-card>
+ <h5 class="card-title">Mobile</h5>
+    <button class="btn btn-primary"  (click)="onProductSelected('Mobile')">Select this product</button>
+                  </app-card>
+              </div>
+               <div class="col-md-4">
+                  <app-card>
+ <h5 class="card-title">TV</h5>
+    <button class="btn btn-primary"  (click)="onProductSelected('TV')">Select this product</button>
+                  </app-card>
+              </div>
+
+</div>
+<app-services-child (addedProduct)="onSelected($event)"[productSelected]="prodSelected" [produtName]="productName"></app-services-child>
+
+
+
+</div>
