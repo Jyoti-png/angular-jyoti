@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesignutilityService } from '../designutility.service';
 
 @Component({
   selector: 'app-contactus',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private _msgService:DesignutilityService) { }
+product="Test"
   ngOnInit() {
+
+    this.product = this._msgService.product;
+  }
+
+  btnClick(){
+    this._msgService.msgAlert();
   }
 
 }

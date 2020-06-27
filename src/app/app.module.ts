@@ -14,12 +14,15 @@ import { HomeComponent } from './home/home.component';
 import { AppNotFoundComponent } from './app-not-found/app-not-found.component';
 import { CardComponent } from './card/card.component';
 import { ServicesChildComponent } from './services-child/services-child.component';
+import { DesignutilityService } from './designutility.service';
+import { LoginChildComponent } from './login-child/login-child.component';
 //import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouting ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, AboutComponent, ServicesComponent, ContactusComponent, LoginComponent, HomeComponent,  AppNotFoundComponent, CardComponent, ServicesChildComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, AboutComponent, ServicesComponent, ContactusComponent, LoginComponent, HomeComponent,  AppNotFoundComponent, CardComponent, ServicesChildComponent, LoginChildComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [DesignutilityService]
 })
 export class AppModule { }

@@ -1,0 +1,10 @@
+
+    <div class="col-md-12 text-center">
+      
+        <input type="text" #inputvalue placeholder="{{placeholderText}}" class="form-control"><br/>
+        <button class="btn btn-success" (click)="onCreate(inputvalue)">CREATE</button>
+        <p *ngIf="count">Total Count: <strong>{{count}}</strong></p>
+        
+    </div>
+     
+ 

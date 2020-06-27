@@ -11,5 +11,21 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
+users =[];
+admin =[];
+pushUser(data){
+  this.users.push(data);
+}
 
+pushAdmin(admindata){
+  this.admin.push(admindata);
+}
+
+onRemoveUser(item){
+  this.users.splice(item, 1);
+}
+
+onRemoveAdmin(item){
+  this.admin.splice(item, 1);
+}
 }

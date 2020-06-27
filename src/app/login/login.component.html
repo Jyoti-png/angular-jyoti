@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-6 border">
+        <h2>User</h2>
+        <table class="table">
+          <thead>
+            <th>Username</th>
+            <th>Remove</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; index as i">
+              <td>{{user}}</td>
+              <td><button class="btn btn-danger" (click)="onRemoveUser(i)">Remove</button></td>
+              </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="col-md-6 border">
+             <h2>Admin</h2>
+        <table class="table">
+          <thead>
+            <th>Username</th>
+            <th>Remove</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let adminuser of admin; index as i">
+             <td>{{adminuser}}</td>
+              <td><button class="btn btn-danger" (click)="onRemoveAdmin(i)">Remove</button></td>
+              </tr>
+          </tbody>
+        </table>
+        </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+<app-login-child class="col-md-6 alert alert-danger" [placeholderText]="'Create User'" (inputEvent)="pushUser($event)"></app-login-child>
+<app-login-child class="col-md-6 alert alert-success" [placeholderText]="'Create Admin'" (inputEvent)="pushAdmin($event)"></app-login-child>
+  </div></div>
